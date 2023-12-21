@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="mainContainer" class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent p-1">
+        <div class="container-fluid">
+            <img src="assets/logo.jpg" alt="logo" width="80" height="80">
+          <a class="navbar-brand" href="#">Mountain Music</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Mix Odierno</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Per te</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Generi
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Rock</a></li>
+                  <li><a class="dropdown-item" href="#">Pop</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Trap</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Preferiti</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <!-- <div id="bestThree" class="carousel carousel-dark slide vw-60" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#bestThree" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#bestThree" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#bestThree" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="assets/Manicomi_vinile_De_Sfroos.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Davide Van De Sfroos</h5>
+                <p>Manicomi</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="assets/nord-sud-ovest-est-883.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>883</h5>
+                <p>Nord Sud Ovest Est</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/Random_Access_Memories_2xLP_Vinile_Daft_Punk.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Daft Punk</h5>
+                <p>Random Access Memories</p>
+              </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div> -->
+    <div id="albumContainer" class="row p-3 d-none">
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card bg-transparent p-2">
+                <img src="assets/Manicomi_vinile_De_Sfroos.jpg" alt="" class="card-image-top img-fluid shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Manicomi</h5>
+                    <p class="card-subtitle text-muted mb-2">Davide Van De Sfroos</p>
+                    <p class="card-text text-muted">
+                        <a href="#" class="card-link link-success">Rock</a>
+                        <a href="#" class="card-link link-success">Italia</a>
+                        <div class="timeAlbum">49:00:00</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card bg-transparent p-2">
+                <img src="assets/nord-sud-ovest-est-883.jpg" alt="" class="card-image-top img-fluid shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Nord Sud Ovest Est</h5>
+                    <p class="card-subtitle text-muted mb-2">883</p>
+                    <p class="card-text text-muted">
+                        <a href="#" class="card-link link-success">Rock</a>
+                        <a href="#" class="card-link link-success">Italia</a>
+                        <div class="timeAlbum">49:00:00</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card bg-transparent p-2">
+                <img src="assets/Random_Access_Memories_2xLP_Vinile_Daft_Punk.jpg" alt="" class="card-image-top img-fluid shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Random Access Memory</h5>
+                    <p class="card-subtitle text-muted mb-2">Daft Punk</p>
+                    <p class="card-text text-muted">
+                        <a href="#" class="card-link">Rock</a>
+                        <a href="#" class="card-link">Tecno</a>
+                        <div class="timeAlbum">49:00:00</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card bg-transparent p-2">
+                <img src="assets/Manicomi_vinile_De_Sfroos.jpg" alt="" class="card-image-top img-fluid shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Manicomi</h5>
+                    <p class="card-subtitle text-muted mb-2">Davide Van De Sfroos</p>
+                    <p class="card-text text-muted">
+                        <a href="#" class="card-link link-success link-success">Rock</a>
+                        <a href="#" class="card-link link-success link-success">Italia</a>
+                        <div class="timeAlbum">49:00:00</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card bg-transparent p-2">
+                <img src="assets/nord-sud-ovest-est-883.jpg" alt="" class="card-image-top img-fluid shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Nord Sud Ovest Est</h5>
+                    <p class="card-subtitle text-muted mb-2">883</p>
+                    <p class="card-text text-muted">
+                        <a href="#" class="card-link link-success">Rock</a>
+                        <a href="#" class="card-link link-success">Italia</a>
+                        <div class="timeAlbum">49:00:00</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card bg-transparent p-2">
+                <img src="assets/Random_Access_Memories_2xLP_Vinile_Daft_Punk.jpg" alt="" class="card-image-top img-fluid shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Random Access Memory</h5>
+                    <p class="card-subtitle text-muted mb-2">Daft Punk</p>
+                    <p class="card-text text-muted">
+                        <a href="#" class="card-link link-success">Rock</a>
+                        <a href="#" class="card-link link-success">Tecno</a>
+                        <div class="timeAlbum">49:00:00</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="albumView" class="container d-flex flex-column align-items-center">
+        <img src="assets/nord-sud-ovest-est-883.jpg" class="img-thumbnail">
+        <h4>Nord sud Ovest Est</h4>
+        <h5>883</h5>
+        <p class="descAlbum p-2">"Nord sud ovest est" è il titolo del secondo album in studio del gruppo musicale Italiano 883, pubblicato per la prima volta nell'Agosto del 1993. Il disco include dieci brani inediti, compreso il primo singolo estratto "Sei Un Mito".</p>
+        <span class="h5">Tracklist</span>
+        <ol class="list-group">
+            <li class="list-group-items">il Pappagallo</li>
+            <li class="list-group-items">Sei un Mito</li>
+            <li class="list-group-items">Non ci Spezziamo</li>
+            <li class="list-group-items">Come mai</li>
+            <li class="list-group-items">Nord su ovest Est</li>
+        </ol>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
